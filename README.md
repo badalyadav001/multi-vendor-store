@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Multi-Vendor Store Catalog & Dynamic Cart
 
-## Getting Started
+A mobile-first multi-vendor shopping experience built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+The application allows users to browse products from multiple stores and manage products from different vendors within a single dynamic cart.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Live Demo
+https://multi-vendor-store-liart.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 📱 Mobile-first responsive UI
+- 🏪 Multi-vendor product catalog
+- 🛒 Dynamic shopping cart
+- ➕ Increase product quantity
+- ➖ Decrease product quantity
+- 🗑️ Remove items from cart
+- 🏷️ Store-wise cart grouping
+- 💰 Real-time total price calculation
+- 🔢 Real-time total item count
+- 📌 Sticky bottom checkout bar
+- 💾 Cart persistence using localStorage
+- 🛍️ Same product from different stores handled independently
+- ⚡ Fast and lightweight frontend
+- ♿ Basic accessible interactive elements
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Tech Stack
 
-## Learn More
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- React Context API
+- localStorage
+- Git & GitHub
 
-To learn more about Next.js, take a look at the following resources:
+## 📂 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+multi-vendor-store/
+├── app/
+│   ├── cart/
+│   │   └── page.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components/
+│   ├── CartBar.tsx
+│   ├── CartContext.tsx
+│   ├── CartView.tsx
+│   ├── ProductCard.tsx
+│   └── ProductList.tsx
+│
+├── data/
+│   └── products.ts
+│
+├── types/
+│   └── product.ts
+│
+├── public/
+├── package.json
+└── README.md
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🛒 Cart Behavior
 
-## Deploy on Vercel
+The cart supports products from multiple stores simultaneously.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For example:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Ramu Mart
+├── Fresh Milk × 1
+└── Organic Spices × 1
+
+Krishna Dairy
+└── Fresh Milk × 1
+
+Products are tracked using their unique product IDs, so identical product names from different stores remain separate cart items.
+
+📱 Responsive Design
+
+The interface is designed with a mobile-first approach and optimized for screen widths between:
+
+360px
+375px
+390px
+430px
+
+The layout also adapts naturally to larger screens.
+
+💾 Cart Persistence
+
+Cart data is persisted using browser localStorage.
+
+This means users can refresh or revisit the application without losing their current cart items.
+
+The cart is stored under:
+multi-vendor-cart
+
+🎯 Assessment Requirements Covered
+Requirement	Status
+Product catalog	✅
+Product details	✅
+Image placeholder	✅
+Add to cart	✅
+Multi-vendor cart	✅
+Store-wise grouping	✅
+Quantity management	✅
+Remove items	✅
+Sticky checkout bar	✅
+Live item count	✅
+Live total price	✅
+Mobile-first design	✅
+localStorage persistence	✅
+
+👨‍💻 Developer
+Badal Yadav
+Frontend Developer
+Technologies
+Next.js · React · TypeScript · Tailwind CSS
